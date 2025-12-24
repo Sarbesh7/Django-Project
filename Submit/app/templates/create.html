@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<!-- navbar bootstrap -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sarbesh</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active"  href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'create' %}">create</a>
+        </li>
+       
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar bootstrap -->
+
+
+<!-- heading -->
+
+<h1 class="text-center my-4  text-white text">Create New Entry</h1>
+    
+<!-- form bootsrap -->
+
+<form class="container" method="POST">
+
+  {% csrf_token %}
+  
+  <div class="row g-3">
+
+    <div class="col-md-6">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" placeholder="Enter your name.">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Age</label>
+      <input type="number" class="form-control" name="age" placeholder="Enter your age.">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" placeholder="Enter your email.">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Address</label>
+      <input type="text" class="form-control" name="address" placeholder="Enter your address.">
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+
+  </div>
+</form>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+</body>
+</html>

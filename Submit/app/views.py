@@ -8,7 +8,7 @@ from django.http import HttpResponse
 class Home(View):
     def get(self, request):
         students = Student.objects.all()
-        return render(request, 'home.html', {'students': students})
+        return render(request, 'index.html', {'students': students})
 
 
 

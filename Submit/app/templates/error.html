@@ -2,13 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Email Already Used</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .error-container {
+            background: #ffffff;
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .error-container h1 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .error-container p {
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .error-container a {
+            display: inline-block;
+            text-decoration: none;
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .error-container a:hover {
+            background: #2c80b4;
+        }
+    </style>
 </head>
 <body>
-    <h1>An error occurred</h1>
-    enter different email   
-    
-    
+
+    <div class="error-container">
+        <h1>Email Already Registered</h1>
+        <p>
+            The email address you entered is already associated with an existing account.
+            Please use a different email.
+        </p>
+        <a href="javascript:history.back()">Go Back</a>
+    </div>
+
 </body>
 </html>
